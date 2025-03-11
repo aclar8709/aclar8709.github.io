@@ -13,7 +13,6 @@ let editElement;
 let editFlag = false;
 let editID = '';
 
-let idLength = 0;
 //*****EVENT LISTENERS */
 form.addEventListener("submit", addOption);
 clearBtn.addEventListener("click",clearItems);
@@ -27,7 +26,6 @@ function addOption(e)
     e.preventDefault();
     const value = entry.value;
     const id = new Date().getTime().toString();
-    idLength++;
     console.log(value + ' ' + id);
 
     if(value && !editFlag)
@@ -38,7 +36,6 @@ function addOption(e)
 
         setBackToDefault();
 
-        //add to local storage
         addToLocalStorage(id,value);
     }
     else if(value &&  editFlag)
@@ -124,7 +121,7 @@ function makeChoice()
     let selection = Math.floor(Math.random() * maxNum);
     console.log(selection);
     let element = list.children[selection];
-    element.style.backgroundColor = "hsl(120, 100%, 25%) ";
+    element.style.backgroundColor = "hsl(315, 100.00%, 25.10%)";
 
 }
 //***** LOCAL STORAGE */
