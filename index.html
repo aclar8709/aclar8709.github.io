@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indecision Machine</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="generalStyle.css">
+    <link rel="stylesheet" href="indexStyle.css">
 </head>
 <body>
+    <div class = "heading">
+        <h1>Indecision Machine</h1>
+        <div class = "navBar">
+            <button onclick = "dropdownNav()" class = "dropbtn">Click Me</button>
+            <div id = "dropdown" class = "dropdown-content">
+                <a href="index.html">Indecision Machine</a>
+                <a href="notes.html">Notes</a>
+            </div>
+        </div>
+    </div>
     <section class = "section-center">
     <form class = "list-form">
         <p class = "alert"> </p>
-        <h3>Indecision Machine</h3>
         <div class = "form-control">
             <input type = "text" id = "entry" placeholder="Enter Choice">
             <button type = "submit" class = "submit-btn">Submit</button>
@@ -24,6 +34,7 @@
         <button type="button" class = "clear-btn" >Clear List</button>
     </div>
     </section>
+    <script src="general.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

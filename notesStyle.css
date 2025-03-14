@@ -1,0 +1,78 @@
+.heading
+{
+    background-color: violet;
+}
+#addNoteBtn
+{
+    float: right;
+    border-radius: 5px;
+    color: white;
+    background-color: purple;
+    padding: 10px;
+    margin: 15px;
+}
+
+#container
+{
+    width: 100%;
+    margin-top:100px;
+}
+.note
+{
+    background-color: white;
+    width: 380px;
+    height: 260px;
+    margin: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    float:left;
+}
+.icons 
+{
+    width: 100%;
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    border-radius: 10px 10px 0px 0px;
+}
+.icons .save-Btn
+{
+    background-color:violet;
+}
+.icons .delete-Btn
+{
+    background-color: #C54C4D;
+}
+.note textarea{
+    border: none;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: lavender;
+    border-radius: 0px 0px 10px 10px;
+}
+.content
+{
+    min-height: 190px;
+}
+.title-div textarea
+{
+    border-radius: 0px 0px 0px 0px;
+    margin-bottom: -4px;
+    height: 25px;
+    background-color: violet;
+    font-weight: bolder;
+    font-size: x-large;
+    overflow: none;
+}
+.note textarea:focus
+{
+    border:0;
+    outline: 0;
+}

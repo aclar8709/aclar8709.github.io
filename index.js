@@ -18,7 +18,7 @@ form.addEventListener("submit", addOption);
 clearBtn.addEventListener("click",clearItems);
 decisionBtn.addEventListener("click", makeChoice);
 //load items
-window.addEventListener('DOMContentLoaded', setUpItems);
+//window.addEventListener('DOMContentLoaded', setUpItems);
 
 // ***** FUNCTIONS *****
 function addOption(e)
@@ -89,7 +89,6 @@ function removeListItem(e)
         list.classList.remove("show-container");
     }
     removeFromLocalStorage(id);
-    //location.reload();
 
 }
 function editListItem(e)
@@ -111,7 +110,7 @@ function setBackToDefault()
     submitBtn.textContent = "Submit";
     for(let i = 0; i < list.children.length; i ++)
     {
-        list.children[i].style.backgroundColor = "aquamarine";
+        list.children[i].style.backgroundColor = "white";
     }
 }
 function makeChoice()
@@ -158,7 +157,6 @@ function removeFromLocalStorage(id)
     localStorage.setItem('list', JSON.stringify(items));
     if(items)
     {
-        console.log("items");
         list.classList.add("show-container");
 
     }
