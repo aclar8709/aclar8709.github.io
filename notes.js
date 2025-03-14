@@ -76,7 +76,7 @@ function setUpNotes()
     if(notes.length > 0)
     {
         notes.forEach(function(note){
-            addNote(note.title, note.content);
+            addNote(notes.length, note.title, note.content);
         });
     }
 }
