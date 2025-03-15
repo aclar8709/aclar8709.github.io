@@ -67,7 +67,10 @@ function calculate(op, x, y)
             appendNum(' = ' + (x/y));
             break;
         case 'mod':
-            console.log("To be implemented");
+            z = x/y;
+            z = Math.trunc(z);
+            z = z*y;
+            appendNum(' = ' + (x-z));
             break;
     }
 
