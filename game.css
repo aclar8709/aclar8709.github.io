@@ -1,0 +1,37 @@
+#gameConsole
+{
+    background-color: #181818;
+    height: 300px;
+    width: 500px;
+    margin-left:20px;
+    
+}
+
+#player
+{
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border:1px solid white;
+    z-index: 1;
+    position: absolute;
+    top: 250px;
+}
+#ground
+{
+    background-color: gray;
+    height: 30px;
+    width: 500px;
+    position: absolute;
+    top: 280px;
+}
+.obstacle
+{
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 250px;
+    left: 570px;
+}

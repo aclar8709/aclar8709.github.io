@@ -18,7 +18,7 @@ form.addEventListener("submit", addOption);
 clearBtn.addEventListener("click",clearItems);
 decisionBtn.addEventListener("click", makeChoice);
 //load items
-//window.addEventListener('DOMContentLoaded', setUpItems);
+window.addEventListener('DOMContentLoaded', setUpItems);
 
 // ***** FUNCTIONS *****
 function addOption(e)

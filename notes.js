@@ -9,9 +9,12 @@ window.addEventListener('DOMContentLoaded', setUpNotes)
 // ****** FUNCTIONS ******
 function addNote (e,title="", text="")
 {
-   
+    const id = new Date().getTime().toString();
     const note = document.createElement("div");
     note.classList.add("note");
+    const attr = document.createAttribute("data-id");
+    attr.value = id;
+    note.setAttributeNode(attr);
     note.innerHTML = `
     <div class="icons">
          <button class = "save-Btn">Save</button>
@@ -37,37 +40,40 @@ function deleteNote(e)
 {
     const note = e.currentTarget.parentElement.parentElement;
     container.removeChild(note);
-    deleteNoteFromLocalStorage(note);
+    deleteNoteFromLocalStorage(note.dataset.id);
 }
 // ****** LOCAL STORAGE ******
 function saveNoteToLocalStorage(e)
 {
     const note = e.currentTarget.parentElement.parentElement;
-    const title = note.querySelector(".title").value;
-    const content = note.querySelector(".content").value;
+    const title = note.querySelector('.title').value;
+    const content = note.querySelector('.content').value;
+    const id = note.dataset.id;
+    console.log(title + content);
+    const noteText = {id, title, content};
 
-    const noteText = {title,content};
+    console.log(noteText);
     let notes = getLocalStorage();
     notes.push(noteText);
-    localStorage.setItem('notes', JSON.stringify(notes));
+    console.log(notes);
+    localStorage.setItem('noteList', JSON.stringify(notes));
 }
-function deleteNoteFromLocalStorage(note)
+function deleteNoteFromLocalStorage(id)
 {
-    const title = note.querySelector(".title").value;
-    const content = note.querySelector(".content").value;
-
+   
     let notes = getLocalStorage();
-    notes = notes.filter(function(note){
-        if(note.content != content)
+    notes = notes.filter(function(item){
+       console.log(item.id == id);
+        if(item.id != id)
         {
-            return note;
+            return item;
         }
     });
-    localStorage.setItem('notes',JSON.stringify(notes));
+    localStorage.setItem('noteList',JSON.stringify(notes));
 }
 function getLocalStorage()
 {
-    return localStorage.getItem("notes")?JSON.parse(localStorage.getItem('notes')): [];
+    return localStorage.getItem("noteList")?JSON.parse(localStorage.getItem('noteList')): [];
 }
 // ****** SETUP ******
 function setUpNotes()
